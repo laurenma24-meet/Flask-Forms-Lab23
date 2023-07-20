@@ -13,12 +13,12 @@
 
 <ul id="myUL">
 
-  <li><a href="#">
-    {% for facebookriend in facebook_friends %}
-    {{friend}}
+  <li>
+    {% for facebookfriend in list %}
+    <li><a href="#">{{facebookfriend}}</a></li>
     {% endfor %}
-
-  </a></li>
+</li>
+  
 </ul>
 
 <script>
