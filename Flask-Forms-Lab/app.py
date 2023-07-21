@@ -37,15 +37,11 @@ def login():
 def home():
 	return render_template('home.html')
 
-@app.route('/friend_exists/<string>:name')
+@app.route('/friend_exists/<name>')
 def friend_exists(name):
-	name1=""
-	for name in facebook_friends:
-		if name1="true":
-	return render_template("friend_exists.html", name2=name1)
-else:
-	if name1="false":
-	return render_template("friend_exists.html", name2=name1)
+	exists=name in facebook_friends
+	return render_template('friend_exists.html',name=name, exists=exists)
+
 
 
 

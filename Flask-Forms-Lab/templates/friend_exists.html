@@ -11,9 +11,16 @@
 </style>
 <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
+<title>Friend Exists</title>
 </head>
 <body>
-'{{name2}}'
+
+<h1>Friend Exists Check for "{{name}}"</h1>
+{% if exists %}
+  <p>{{name}} is your friend! </p>
+{% else %}
+  <p>{{name}} isnt your friend</p>
+{% endif %}
 
 
 </body>
